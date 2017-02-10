@@ -8,7 +8,7 @@ class LatestEntriesFeed(Feed):
     description = "a stream of cases"
 
     def items(self):
-        return Case.objects.order_by('-year')[:5]
+        return Case.objects.order_by('-year')[:1000]
 
     def item_title(self, item):
         return item.short_name
